@@ -39,11 +39,9 @@
         </service>
 
         <provider
-            android:grantUriPermission="true"
             android:authorities="com.BuggyTheApp.ContentProvider"
-            android:name=".CPclass"
-            android:exported="true"
-            android:enabled="true">
+            android:name="CPclass"
+            android:exported="true">
         </provider>
 
 
