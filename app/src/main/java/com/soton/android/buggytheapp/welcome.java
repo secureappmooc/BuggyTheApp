@@ -50,7 +50,7 @@ public class welcome extends Activity {
 
             } else
             {
-                Toast nodatabase=Toast.makeText(welcome.this, "Sorrey, the database is not found", Toast.LENGTH_SHORT);
+                Toast nodatabase=Toast.makeText(welcome.this, "Sorry, the database is not found", Toast.LENGTH_SHORT);
                 nodatabase.show();
             }
         }
@@ -64,7 +64,7 @@ public class welcome extends Activity {
 
     public void httpserverrequest(View v)
     {
-        Intent i = new Intent(welcome.this, HRtest.class);
+        Intent i = new Intent(welcome.this, HttpsSearch.class);
         startActivity(i);
     }
 

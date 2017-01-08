@@ -8,7 +8,7 @@ import android.content.Intent;
  */
 
 public class broadcaster extends IntentService {
-    //this class dont have defualt constractor
+    //this class do not have default constructor
     public broadcaster()
     {
         super("mybroadcaster");
@@ -20,7 +20,7 @@ public class broadcaster extends IntentService {
     {
         while ( broadcasting) {
             Intent broadcastintent = new Intent();
-            //broadcastintent.setAction("com.soton.android.bugysqliteapp");
+            broadcastintent.setAction("com.soton.android.bugysqliteapp");
             broadcastintent.putExtra("Message", "This is always running service");
             sendBroadcast(broadcastintent);
             try

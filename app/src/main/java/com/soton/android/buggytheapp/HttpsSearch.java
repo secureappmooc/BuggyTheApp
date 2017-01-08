@@ -15,17 +15,12 @@ import java.net.URL;
  * Created by AndroidHPE on 12/6/2016.
  */
 
-public abstract class HttpsSearch extends AsyncTask<String, Void, Object> {
+public abstract class HttpsSearch extends AsyncTask <String, Void, Object> {
 
     @Override
     protected Object doInBackground(String... params) {
         byte[] responseArray;
-        // --------------------------------------------------------
-        // Communication 1st time : Execute image search
-        // --------------------------------------------------------
 
-        // *** POINT 1 *** URI starts with https://.
-        // *** POINT 2 *** Sensitive information may be contained in send data.
         StringBuilder s = new StringBuilder();
         for (String param : params){
             s.append(param);
@@ -41,9 +36,7 @@ public abstract class HttpsSearch extends AsyncTask<String, Void, Object> {
             return null;
         }
 
-        // *** POINT 3 *** Handle the received data carefully and securely,
-        // even though the data was sent from the server connected by HTTPS.
-        // Omitted, since this is a sample. Please refer to "3.2 Handling Input Data Carefully and Securely."
+
         String image_url;
         try {
             String json = new String(responseArray);
@@ -53,12 +46,7 @@ public abstract class HttpsSearch extends AsyncTask<String, Void, Object> {
             return e;
         }
 
-        // --------------------------------------------------------
-        // Communication 2nd time : Get image
-        // --------------------------------------------------------
 
-        // *** POINT 1 *** URI starts with https://.
-        // *** POINT 2 *** Sensitive information may be contained in send data.
         if (image_url != null ) {
             responseArray = getByteArray(image_url);
             if (responseArray == null) {
