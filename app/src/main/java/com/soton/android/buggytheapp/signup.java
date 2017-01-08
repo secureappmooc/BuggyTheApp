@@ -41,7 +41,7 @@ public class signup extends Activity {
             {
                 Toast passmsg=Toast.makeText(signup.this, "Passwords does not match", Toast.LENGTH_SHORT);
                 passmsg.show();
-            }else
+            }else if (!usernamestr.isEmpty() && !passstr.isEmpty() && !namestr.isEmpty())
             {
                 String newuserQuery="INSERT INTO "+ DATABASE_TABLE +" (name, email, username, password)" +
                         "VALUES ('"+namestr+"', '"+emailstr+"', '"+usernamestr+"', '"+passconfstr+"');";
@@ -60,6 +60,11 @@ public class signup extends Activity {
                     Toast notregistered=Toast.makeText(signup.this, "for some reasons we cant register you", Toast.LENGTH_SHORT);
                     notregistered.show();
                 }
+            }
+            else
+            {
+                Toast nodata=Toast.makeText(signup.this, "You did not provide data for one of the fields", Toast.LENGTH_SHORT);
+                nodata.show();
             }
         }
     }

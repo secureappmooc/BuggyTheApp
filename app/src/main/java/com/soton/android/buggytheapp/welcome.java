@@ -64,7 +64,7 @@ public class welcome extends Activity {
 
     public void httpserverrequest(View v)
     {
-        Intent i = new Intent(welcome.this, HttpsSearch.class);
+        Intent i = new Intent(welcome.this, HRtest.class);
         startActivity(i);
     }
 

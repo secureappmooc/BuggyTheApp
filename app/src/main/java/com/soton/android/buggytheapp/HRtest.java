@@ -36,7 +36,7 @@ public class HRtest extends Activity {
 
             String HRusernamestr = HRuserName.getText().toString();
             String HRpasswordstr = HRpassWord.getText().toString();
-            String serverURL= "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q="+HRusernamestr+" &password="+HRpasswordstr;
+            String serverURL= "10.0.0.2/login.php?username="+HRusernamestr+" &password="+HRpasswordstr;
 
             new MyAsyncTask().execute(serverURL,"login");
             //HRresponse.setText(MyAsyncTask.Status.values().toString());
@@ -50,7 +50,7 @@ public class HRtest extends Activity {
         @Override
         protected String doInBackground(String... params) {
             try {
-                String loginrepond="";
+                String loginrepond="10.0.0.2/login";
                 URL serverurl = new URL(params[0]);
                 HttpURLConnection serverurlConnection = (HttpURLConnection) serverurl.openConnection();
                 serverurlConnection.setConnectTimeout(3000);
