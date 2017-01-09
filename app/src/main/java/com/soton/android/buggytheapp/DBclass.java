@@ -21,7 +21,7 @@ public class DBclass extends SQLiteOpenHelper {
 
     SQLiteDatabase db;
 
-    private static final String CREAT_QUERY="create table usertable2 (name text, email text,username text,password text);INSERT INTO usertable2 (name,email,username,password) VALUES ('System Admin','admin@example.com','admin','impossible')";
+    private static final String CREAT_QUERY="create table usertable2 (name text, email text,username text,password text)";
 
     public DBclass(Context context)
     {
@@ -68,6 +68,7 @@ public class DBclass extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREAT_QUERY);
+        db.execSQL("INSERT INTO usertable2 (name,email,username,password) VALUES ('System Admin','admin@example.com','admin','impossible')");
         this.db=db;
     }
 
