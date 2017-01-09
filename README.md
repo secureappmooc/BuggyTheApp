@@ -11,5 +11,5 @@ Here is a list of the files in the app:<br>
 6. HttpsSearch.java // Dummy search class for searching google images, it used to demonstrate over trusted SSL certificate.<br>
 7. MainActivity.java // main activity of the app present the login screen.<br>
 8. signup.java // where the new user sign up to the app and the data stored in the user information database.<br>
-9. welcome.java // interface showen for the loged in users only to start and stop some functions.<br>
+9. welcome.java // interface shown for the logged in users only to start and stop some functions.<br>
       
