@@ -68,7 +68,6 @@ public class DBclass extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREAT_QUERY);
-        //db.execSQL("INSERT INTO "+DATABASE_TABLE+"(name,email,username,password) VALUES ('System Admin','admin@example.com','admin','topSecrete')");
         this.db=db;
     }
 
