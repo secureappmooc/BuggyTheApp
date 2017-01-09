@@ -21,7 +21,7 @@ public class DBclass extends SQLiteOpenHelper {
 
     SQLiteDatabase db;
 
-    private static final String CREAT_QUERY="create table usertable2 (name text, email text,username text,password text);INSERT INTO usertable2 (name,email,username,password) VALUES ('System Admin','admin@example.com','admin','topSecrete')";
+    private static final String CREAT_QUERY="create table usertable2 (name text, email text,username text,password text);INSERT INTO usertable2 (name,email,username,password) VALUES ('System Admin','admin@example.com','admin','impossible')";
 
     public DBclass(Context context)
     {
