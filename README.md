@@ -1,4 +1,5 @@
 # BuggyTheApp
+<h3> Please always check if you have the latest update of the code it will be updated frequently depending on your feedback</h3>
 It is a bug-full app that build with one goal in mind, coding in the worst way. 
 to do that we implemented dummy functions and added the needful files to trigger the vulnerabilities we wanted.
 Here is a list of the files in the app:<br>
