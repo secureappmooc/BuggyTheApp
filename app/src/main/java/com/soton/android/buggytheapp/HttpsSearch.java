@@ -64,6 +64,7 @@ public abstract class HttpsSearch extends AsyncTask <String, Void, Object> {
         BufferedInputStream inputStream = null;
         ByteArrayOutputStream responseArray = null;
         int length;
+        //Hint :: to solve the SSL certificate vulnerability use Certificate pinning
 
         try {
             URL url = new URL(strUrl);
